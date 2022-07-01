@@ -38,14 +38,9 @@ export default class SpaceCraftsScreen extends Component {
                 <Image source={{ uri: item.agency.image_url }} style={styles.itemImage}></Image>
                 <View style={{ padding: 20 }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'purple' }}>{item.name}</Text>
-
-                       {/* <Text style={{ color: '#696969', fontSize: 16 }}>{item}</Text> */} 
-                       {/* <Text style={{ color: '#696969', fontSize: 16 }}>{item.name}</Text> */} 
-                       {/* <Text style={{ color: '#696969', fontSize: 16 }}>{item.agency}</Text> */} 
-                       <Text style={{ color: '#696969', fontSize: 16 }}>{item.agency.name}</Text>  
-
+                    <Text style={{ color: '#696969', fontSize: 16 }}>{item.agency.name}</Text>
                     <View style={{ marginTop: 10 }}>
-                        <Text style={{ color: '#A9A9A9', fontSize: 13 }}>{item.agency.description}</Text>
+                    <Text style={{ color: '#A9A9A9', fontSize: 13 }}>{item.agency.description}</Text>
                     </View>
                 </View>
             </View>
@@ -71,35 +66,13 @@ export default class SpaceCraftsScreen extends Component {
                             <Text style={styles.titleText}>Spacecrafts</Text>
                         </View>
                         <View style={{ flex: 0.85 }}>
-                          {/* <FlatList
-                                keyExtractor={}
-                                data={this.state.aircrafts}
-                                renderItem={this.renderItem}
-                                initialNumToRender={10}
-                            /> */}
-
-                            {/* <FlatList
-                                keyExtractor={this.keyExtractor}
-                                data={this.state.aircrafts}
-                                renderItem={}
-                                initialNumToRender={10}
-                            /> */}
-
-                            
+                            <FlatList
                                 keyExtractor={this.keyExtractor}
                                 data={this.state.aircrafts}
                                 renderItem={this.renderItem}
                                 initialNumToRender={10}
-                            
-                            
-                            {/* <FlatList
-                                keyExtractor={this.keyExtractor}
-                                initialNumToRender={10}
-                            /> */}
+                            />
                         </View>
-
-
-
                     </ImageBackground>
                 </View>
             )
